@@ -156,7 +156,7 @@ header {
   .card {
     padding: 1rem;
     margin-bottom: 1rem;
-    /* border: 1px solid red; */
+    border: 1px solid #000;
   }
 
   .card h3 {
