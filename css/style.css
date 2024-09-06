@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --nav-height: 5rem;
+  --container-width: 90%;
+  --container-max-width: 1100px;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* p {
+  line-height: 1.5;
+} */
+
+header {
+  height: 80vh;
+  background-image: url("https://placehold.co/600x400");
+  background-size: cover;
+  overflow: auto;
+}
+
+.container {
+  width: var(--container-width);
+  max-width: var(--container-max-width);
+  margin: auto;
+}
+
+/******************************
+      Navigation
+******************************/
+
+@media screen and (min-width: 0rem) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    height: var(--nav-height);
+    width: 100%;
+    padding: 0 calc((100% - var(--container-width)) / 2);
+    background-color: gray;
+    /* border: 1px solid red; */
+  }
+
+  nav img {
+    height: 100%;
+    opacity: 1;
+    /* border: 1px solid red; */
+  }
+
+  .hamburger {
+    margin: auto 0;
+    cursor: pointer;
+    opacity: 1;
+    /* border: 1px solid red; */
+  }
+
+  .bar {
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    background-color: black;
+  }
+
+  nav ul {
+    padding: 1rem;
+    position: fixed;
+    right: -100%;
+    background-color: gray;
+    list-style: none;
+  }
+
+  nav ul.active {
+    top: 5rem;
+    right: 0;
+  }
+
+  nav li {
+    padding: 1rem;
+  }
+
+  nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  nav ul {
+    display: flex;
+    position: static;
+    /* border: 1px solid red; */
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/******************************
+      Hero
+******************************/
+@media screen and (min-width: 0rem) {
+  #hero {
+    display: flex;
+    align-items: center;
+    height: calc(100% - var(--nav-height));
+    margin-top: var(--nav-height);
+    /* border: 1px solid red; */
+  }
+
+  #hero .container {
+    text-align: center;
+    /* border: 1px solid red; */
+  }
+
+  #hero .container h1 {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #hero .container p {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #hero .container a {
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    /* border: 1px solid red; */
+  }
+}
+
+/******************************
+      Services
+******************************/
+@media screen and (min-width: 0rem) {
+  #services {
+    display: flex;
+    padding: 3rem 0;
+  }
+
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    /* border: 1px solid red; */
+  }
+
+  .card h3 {
+    padding-bottom: 1rem;
+  }
+
+  .card p {
+    /* padding: 1rem; */
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+
+  .card {
+    width: 31%;
+  }
+}
+
+/****************************** 
+      Location/Hours Section 
+******************************/
+@media screen and (min-width: 0px) {
+  #business-info {
+    padding-bottom: 2rem;
+  }
+
+  iframe {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 2rem;
+    /* border: 1px solid red; */
+  }
+
+  .location-hours h3 {
+    padding-bottom: 1rem;
+  }
+
+  .location {
+    padding-bottom: 2rem;
+    /* border: 1px solid red; */
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+
+  .hours {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .days {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  #business-info .container {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+
+  iframe {
+    max-width: 35%;
+    /* border: 1px solid red; */
+  }
+
+  .location-hours {
+    width: 100%;
+    padding-left: 5%;
+    /* border: 1px solid red; */
+  }
+
+  .info {
+    display: flex;
+    /* border: 1px solid red; */
+  }
+
+  .location {
+    padding-right: 5%;
+    /* border: 1px solid red; */
+  }
+}
+
+/****************************** 
+      Footer 
+******************************/
+@media screen and (min-width: 0px) {
+  footer {
+    /* height: 5rem; */
+    background-color: lightgray;
+    /* border: 1px solid red; */
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+  }
+
+  footer .logo {
+    /* height: 100%; */
+    margin: auto 0;
+    /* border: 1px solid red; */
+  }
+
+  footer p {
+    margin: auto;
+    /* border: 1px solid red; */
+  }
+
+  .social-media {
+    margin: auto 0;
+    height: 100%;
+    /* border: 1px solid red; */
+  }
+  .social-media a {
+    padding: 0.5rem;
+    margin: auto;
+    color: lightgray;
+    text-decoration: none;
+    /* border: 1px solid red; */
+  }
+}
