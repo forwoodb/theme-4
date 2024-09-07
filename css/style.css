@@ -1,7 +1,7 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   /* border: 1px solid red; */
 }
 
@@ -38,15 +38,17 @@ header {
 
 @media screen and (min-width: 0rem) {
   nav {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     top: 0;
-    height: var(--nav-height);
     width: 100%;
-    padding: 0 calc((100% - var(--container-width)) / 2);
     background-color: gray;
     /* border: 1px solid red; */
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    height: var(--nav-height);
   }
 
   nav img {
@@ -79,7 +81,7 @@ header {
   }
 
   nav ul.active {
-    top: 5rem;
+    top: var(--nav-height);
     right: 0;
   }
 
